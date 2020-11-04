@@ -5,17 +5,18 @@ The optimizations were first done on a single core. Then, multiple cores were in
 
 ## Single core optimizations:
 
-- Vectorisation of operations
-- Optimised the ordering of operations for better cache exploitation
+- Vectorisation of operations.
+- Optimised the ordering of operations for better cache exploitation.
+- Optimised code so that the number of "Branch" instructions in the main loop of the executable is minimized. 
 
 ## Multiple Cores:
 
 - Message Passing Interface(MPI) was used to employ multiple worker cores. Each core was given a region in the grid, and the necessary info was communicated between cores.
 - Three main modes/architectures were implemented:
-    1) Synchronous data exchnge
-    2) Asynchronous data exchnge
-    3) Synchronous data Exchange with cartesian Topology
+    1) Synchronous data exchnge.
+    2) Asynchronous data exchnge.
+    3) Synchronous data Exchange with cartesian Topology.
 
-The code was run on BlueCrystal, the University Of Bristol's supercomputer:
+Intel Advisor was used throughout the development for code profiling. The code was run on BlueCrystal, the University Of Bristol's supercomputer:
 
 https://www.acrc.bris.ac.uk/acrc/phase3.htm
